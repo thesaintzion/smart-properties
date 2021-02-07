@@ -1,0 +1,24 @@
+/*
+Theme Name:  Smart Properties
+Theme URI: https://smartproperties.ng/
+Author: Saint Stephen
+Author URI: https://saint-portfolio.herokuapp.com
+GitHub Theme URI: https://github.com/thesaintzion/smart-properties
+Description: Combination Bootstrap 4 and other technologies for Rosella.. By Saint Stephen.
+Version: 0.1
+Requires PHP: 5.6
+License: UnderStrap WordPress Theme, Copyright 2013-2017 
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: smartproperties
+Tags: logo, card, rounded
+*/
+
+
+/*
+This file is just used to identify the theme in WordPress.
+The compiled CSS output can be found in /css/theme.css
+The SASS sources for it can be found in /sass/
+The dependencies can be found in /src/ after running "gulp copy-assets" terminal command
+
+...and now go out and play!
+*/
