@@ -10,8 +10,6 @@ defined( 'ABSPATH' ) || exit;
 
 
 
-// $post_type
-
 $price = get_post_meta( $post->ID, 'Price',  true);
 $type = get_post_meta( $post->ID, 'Type',  true);
 $purpose = get_post_meta( $post->ID, 'Purpose', true);
@@ -27,18 +25,17 @@ $features_array = preg_split ("/\,/", $features);
 ?>
                    
                    
-                   
-<div class="grids4-info  col-lg-4 col-md-6">
-    <div class=" h-100 <?php if($status === 'Sold' || $status === 'sold') : echo 'sol custom-rounded';  else: echo 'custom-rounded' ; endif; ?>">
+        
+    <div class=" h-100 <?php if($status == 'Sold' || $status == 'sold') : echo 'sol custom-rounded';  else: echo 'custom-rounded' ; endif; ?>">
     <a href="<?php the_permalink(); ?>" >
         <div class="card-img-con ">
         <img  src="<?php the_post_thumbnail_url(); ?>" class="img-fluid"  alt="<?php  the_title(); ?>">
 
-        <!-- <?php if( $status === 'sold' || $status === 'Sold') : ?> -->
+        <?php if( $status === 'sold' || $status === 'Sold') : ?>
         <div class="sold-con d-flex  align-items-center">
         <p class="mb-0 shadow w-100 text-center bg-danger"> <span class="fa fa-warning"></span>  Property Sold</p>
         </div>
-        <!-- <?php endif; ?> -->
+        <?php endif; ?>
 
         </div>
     </a>
@@ -61,6 +58,6 @@ $features_array = preg_split ("/\,/", $features);
         </ul>
     </div>
 </div>
-</div>
+
 
 

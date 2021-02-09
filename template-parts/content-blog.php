@@ -10,6 +10,11 @@ defined( 'ABSPATH' ) || exit;
 ?>
 
 
+<div class="bg-light  p-5 d-flex justify-content-end">
+<small>Ads X</small>
+  </div>
+
+
 
 <section class="locations-1" id="locations">
 
@@ -22,15 +27,15 @@ defined( 'ABSPATH' ) || exit;
 
 <!-- <?php wp_get_archives(); ?> -->
 
-<!-- 
+
 <?php 
 
-$categories = get_categories();
-foreach($categories as $category) {
-   echo '<div class="col-md-4"><a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a></div>';
-}
+// $categories = get_categories();
+// foreach($categories as $category) {
+//    echo '<div class="col-md-4"><a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a></div>';
+// }
 
-?> -->
+?> 
 
 
                 <!-- <ul class="nav nav-pills  justify-content-center mb-t">

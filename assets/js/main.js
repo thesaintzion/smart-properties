@@ -53,13 +53,18 @@ $(document).ready(function() {
 });
 
 var menuItem = document.querySelector("#menu-item-160");
+var menuItems = document.querySelector(".menu-item");
 
 function  getPostType(type){
 
-    if(type === 'properties'){
+    if(type == 'properties'){
+        // menuItems.classList.remove("active"); 
         menuItem.classList.add("active");
+        
+    console.log('yes', type);
     }else{
-        menuItem.classList.remove("active");  
+        menuItem.classList.remove("active"); 
+        console.log('No', type); 
     }
    
     // header.classList.add("shadow-sm");

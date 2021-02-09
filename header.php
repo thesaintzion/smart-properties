@@ -57,7 +57,10 @@ defined( 'ABSPATH' ) || exit;
 
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-0">
   <div class="container py-0">
-  <a class="navbar-brand" href="<?php echo get_home_url(); ?>"><span class="fa fa-home  text-bold">Smart Properties</a>
+  <a class="navbar-brand text-success text-uppercase" href="<?php echo esc_url( home_url( '/' )); ?>"><span class="fa fa-home  text-bold "></span>
+  <strong> <?php bloginfo( 'name' ); ?> </strong>
+
+</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'your-theme-slug' ); ?>">
         <span class="navbar-toggler-icon"></span>
     </button>

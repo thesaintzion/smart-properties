@@ -1,5 +1,3 @@
-
-
 <?php
 /**
  * smart_properties enqueue scripts

@@ -10,9 +10,14 @@ defined( 'ABSPATH' ) || exit;
 
 // print_r($post);
 ?>
+
+<div class="bg-light  p-5 d-flex justify-content-end mt-1">
+<small>Ads X</small>
+  </div>
+
 <div class="container">
 <div class="row">
-<div class="col-lg-8 over-flow-scroll mx-auto">
+<div class="col-lg-8">
 <article class="content py-5">
 		
 <header class="content-header">
@@ -86,6 +91,25 @@ Category: <button class='btn btn-sm border btn-outline-dark mr-2 py-0'><?php ech
 ?>
 	
 </article><!-- #post-## -->
+</div>
+<div class="col-lg-4">
+
+<aside class="content py-5">
+<div class="bg-light p-5 d-flex justify-content-end">
+<small>Ads X</small>
+  </div>
+
+  <div class="bg-light  p-5 d-flex justify-content-end mt-1">
+<small>Ads X</small>
+  </div>
+
+  <div class="bg-light  p-5 d-flex justify-content-end mt-1">
+<small>Ads X</small>
+  </div>
+  <div class="bg-light  p-5 d-flex justify-content-end">
+  </div>
+</aside>
+
 </div>
 </div>
 </div>

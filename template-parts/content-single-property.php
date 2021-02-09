@@ -7,8 +7,6 @@
 
 // Exit if accessed directly.
 
-
-
 defined( 'ABSPATH' ) || exit;
 
 
@@ -61,12 +59,10 @@ $features_array = preg_split ("/\,/", $features);
         <div>
         <?php if(has_post_thumbnail()) : ?>
         
-        <img src="<?php the_post_thumbnail_url(); ?>" class="w-100 rounded mb-4">
+        <img src="<?php the_post_thumbnail_url(); ?>" class="w-100 rounded mb-4 shadow-sm">
         
       <?php  endif;?>
         </div>
-
-
 
     <button  data-toggle="modal" data-target="#enquiryModal" class="btn btn-lg btn-success w-100 mb-4"> 
     <div class="d-flex justify-content-between align-items-center">
@@ -140,6 +136,21 @@ $features_array = preg_split ("/\,/", $features);
     <span class="w-100"> Make Enquiry </span>
     </div>
     </button>
+
+
+
+    <div class="bg-light  mt-3 p-5 d-flex justify-content-end">
+<small>Ads X</small>
+  </div>
+
+  <div class="bg-light  p-5 d-flex justify-content-end mt-1">
+<small>Ads X</small>
+  </div>
+
+  <div class="bg-light  p-5 d-flex justify-content-end mt-1">
+<small>Ads X</small>
+  </div>
+
 
 </article>
     </div>

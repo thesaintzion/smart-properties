@@ -43,29 +43,18 @@ defined( 'ABSPATH' ) || exit;
 
               <div class="footer-list-29  col-xl-5  col-sm-12 mb-5">
                   <h6 class="footer-title-29">About Us</h6>
+
+                  <?php get_custom_logo() ?> 
                   <ul>
-                     <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae</p>
+                     <p>
+                     <?php bloginfo( 'description' ); ?>
+                    </p>
                   </ul>
-                  <div class="main-social-footer-29">
-                    <h6 class="footer-title-29">Social Links</h6>
-                      <a href="#facebook" class="facebook"><span class="fa fa-facebook"></span></a>
-                      <a href="#twitter" class="twitter"><span class="fa fa-twitter"></span></a>
-                      <a href="#instagram" class="instagram"><span class="fa fa-instagram"></span></a>
-                      <a href="#google-plus" class="google-plus"><span class="fa fa-google-plus"></span></a>
-                      <a href="#linkedin" class="linkedin"><span class="fa fa-linkedin"></span></a>
-                  </div>
+
+                  <!-- <a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a> -->
               </div>
 
-              <div class="footer-list-29  col-xl-3 col-sm-6 mr-auto col-sm-6 mb-5">
-                  <ul>
-                      <h6 class="footer-title-29">Useful Links</h6>
-                      <li><a href="services.html">Management</a></li>
-                      <li><a href="services.html">Reporting</a></li>
-                      <li><a href="services.html">Tracking</a></li>
-                      <li><a href="services.html">All Users</a></li>
-                      <li><a href="contact.html">Support</a></li>
-                  </ul>
-              </div>
+             
          
               <div class="footer-list-29 col-xl-3 col-sm-6 mr-auto mb-5">
               <h6 class="footer-title-29">Quick Links</h6>
@@ -81,9 +70,20 @@ defined( 'ABSPATH' ) || exit;
 				
 				?>
               </div>
+
+              <div class="footer-list-29  col-xl-3 col-sm-6 mr-auto col-sm-6 mb-5">
+              <div class="main-social-footer-29 mt-0">
+                    <h6 class="footer-title-29">Social Links</h6>
+                      <a href="#facebook" class="facebook"><span class="fa fa-facebook"></span></a>
+                      <a href="#twitter" class="twitter"><span class="fa fa-twitter"></span></a>
+                      <a href="#instagram" class="instagram"><span class="fa fa-instagram"></span></a>
+                      <a href="#google-plus" class="google-plus"><span class="fa fa-google-plus"></span></a>
+                      <a href="#linkedin" class="linkedin"><span class="fa fa-linkedin"></span></a>
+                  </div>
+              </div>
           </div>
           <div class="bottom-copies text-center">
-              <p class="copy-footer-29"> &copy; <a href="<?php echo get_bloginfo('url'); ?>" class="text-success"><?php echo get_bloginfo('name'); ?></a>  <date class="main-date">2020</date>, All rights reserved</p>
+              <p class="copy-footer-29"> &copy; <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="text-success"><?php echo get_bloginfo('name'); ?></a>  <date class="main-date">2020</date>, All rights reserved</p>
               <a href="https://w3layouts.com"></a>
                
           </div>
