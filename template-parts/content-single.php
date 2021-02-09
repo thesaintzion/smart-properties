@@ -7,6 +7,7 @@
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
+print_r($post)
 ?>
 
 <article class="content px-3 py-5 p-md-5">

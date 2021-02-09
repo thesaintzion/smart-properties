@@ -51,3 +51,20 @@ $(document).ready(function() {
 
 
 });
+
+var menuItem = document.querySelector("#menu-item-160");
+
+function  getPostType(type){
+
+    if(type === 'properties'){
+        menuItem.classList.add("active");
+    }else{
+        menuItem.classList.remove("active");  
+    }
+   
+    // header.classList.add("shadow-sm");
+    // header.classList.remove("navbar-light");
+
+   
+    console.log('Prop', type);
+}

@@ -97,7 +97,7 @@ function custom_post_types(){
 	'menu_icon' => 'dashicons-admin-multisite',
 	'public' => true,
 	'has_archive' => true,
-	'supports' => array('title', 'editor','thumbnail')
+	'supports' => array('title', 'editor','thumbnail', 'custom-fields')
 	);
 
 	register_post_type('properties', $args);
@@ -120,7 +120,7 @@ function custom_taxonomy(){
 
 	);
 
-	register_taxonomy('property_types', 'properties', $args);
+	register_taxonomy('property-types', 'properties', $args);
 }
 
 add_action('init', 'custom_taxonomy');

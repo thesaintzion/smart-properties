@@ -10,6 +10,10 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
+
+
+
+
 ?>
 
  <section class="w3l-footer-29-main" id="footer">
@@ -91,13 +95,19 @@ defined( 'ABSPATH' ) || exit;
 </button>
 </section>
 
-   <?php  wp_footer(); ?>
+ 
+<?php  wp_footer(); ?>
 
 <script>
+  
    function topFunction() {
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
     }
+
+    const postType = "<?php print_r($post->post_type); ?>";
+
+    getPostType(postType);
 </script>
 
 </body>

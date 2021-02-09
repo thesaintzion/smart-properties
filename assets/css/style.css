@@ -14,21 +14,6 @@
     font-family: 'Hind', sans-serif;
 }
 
-.navbar {
-    /* margin-top: 0 !important;
-    margin-bottom: 0 !important;
-    padding-top: 0 !important;
-    padding-bottom: 0 !important; */
-}
-
-.navbar li {
-    /* background-color: red !important;
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-    padding-top: 0 !important;
-    padding-bottom: 0 !important; */
-}
-
 .navbar a {
     padding-top: 15px !important;
     padding-bottom: 15px !important;
@@ -96,6 +81,29 @@ nav {
     width: 100%;
     background-color: #f8f9fa;
     background-color: #343a40;
+    position: relative;
+}
+
+.card-img-con .sold-con {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 100%;
+    width: 100%;
+}
+
+.card-img-con .sold-con p {
+    background-color: var(--app-color-danger);
+    /* border-radius: 20px; */
+    padding: 3px 10px 3px 10px;
+    color: #fff;
+    /* -ms-transform: rotate(-20deg); */
+    /* IE 9 */
+    /* transform: rotate(-20deg);
+    margin-left: -30px;
+    margin-right: -30px; */
 }
 
 .custom-rounded {
@@ -112,15 +120,52 @@ nav {
     box-shadow: 0 1px 10px 0 rgb(32 33 36 / 20%);
 }
 
-.custom-rounded:hover .info-bg {
+.custom-rounded:hover .info-bg,
+.custom-rounded:hover {
     background-color: var(--green);
 }
 
-.custom-rounded:hover h5 a,
+.custom-rounded:hover .info-bg h3 a {
+    color: #fff !important;
+}
+
+.custom-rounded:hover h3 a,
 .custom-rounded:hover p,
 .custom-rounded:hover span,
-.custom-rounded:hover li {
+.custom-rounded:hover li,
+.custom-rounded:hover .fa {
     color: #ffffff !important
+}
+
+.sold {
+    box-shadow: 0 1px 6px 0 rgb(32 33 36 / 10%);
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.sold:hover {
+    background-color: var(--app-color-danger) !important;
+    box-shadow: 0 1px 6px 0 rgb(32 33 36 / 10%);
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.sold:hover h3 a,
+.sold:hover p,
+.sold:hover span,
+.sold:hover li,
+.sold:hover .fa {
+    color: #ffffff !important;
+}
+
+
+/* .sold .info-bg h3 a,.sold .info-bg a {
+    color: #ffffff !important;
+} */
+
+.sold:hover .info-bg,
+.sold:hover {
+    background-color: var(--app-color-danger) !important;
 }
 
 .card-img-con img {
@@ -140,7 +185,6 @@ nav {
 .text-muted {
     color: #1c1834 !important;
     opacity: 0.7;
-    /* font-weight: bolxd !important; */
 }
 
 @media screen and (min-width: 980px) {

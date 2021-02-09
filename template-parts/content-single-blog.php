@@ -7,6 +7,8 @@
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
+
+// print_r($post);
 ?>
 <div class="container">
 <div class="row">
@@ -14,9 +16,8 @@ defined( 'ABSPATH' ) || exit;
 <article class="content py-5">
 		
 <header class="content-header">
-		<h1><?php the_title() ?> </h1>
+		<h1><?php the_title() ?>   </h1>
 			<div class="meta mb-3  text-bold">
-		
                 <span class="btn btn-sm  btn-success  py-0 shadow-sm">
                 <i class='fa fa-user'></i>
                  <?php 
@@ -26,8 +27,10 @@ defined( 'ABSPATH' ) || exit;
             ?></span> |
             	<span class="btn btn-sm  btn-success  py-0 shadow-sm"> <i class='fa fa-history'></i> <?php the_date(); ?></span> |
 				<span class="btn btn-sm  btn-success  py-0 shadow-sm "> <i class='fa fa-comment'></i> <?php comments_number();  ?></a></span> 
-                <!-- <span class="comment text-muted text-success"> <i class='fa fa-envelop'></i> <?php echo get_the_date('l jS f, Y');  ?></a></span> -->
+                <!-- <span class="comment text-muted text-success"> <i class='fa fa-envelop'></i> <?php echo get_the_date('l jS , Y');  ?></a></span> -->
 			</div>
+
+            <!-- <p><?php echo $post->post_date;  ?></p> -->
            
 		</header>
 
