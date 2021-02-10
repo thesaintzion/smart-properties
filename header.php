@@ -20,7 +20,10 @@ defined( 'ABSPATH' ) || exit;
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="https://saint-portfolio.herokuapp.com">    
+    <meta name="author" content="St. Stephen (https://saint-portfolio.herokuapp.com)">  
+
+    <meta name="apple-mobile-web-app-status-bar-style" content="#02ad88" />
+    <meta data-rh="true" name="theme-color" content="#02ad88 ">
  
     <?php  wp_head(); ?>
 

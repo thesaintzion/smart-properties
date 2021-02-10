@@ -9,24 +9,19 @@
 
 defined( 'ABSPATH' ) || exit;
 
+$price = number_format(get_field('price'));
+$location =   get_field('location');
+$type = get_field('type');
+$purpose = get_field('purpose');
+$payment_status = get_field('payment_status');
+$status = get_field('status') ?   get_field('status') : 'Available';
+$document_type = get_field('document_title');
+$features = get_field('features');
+$land_size =  get_field('land_size');
+$land_unit =  get_field('land_unit');
 
-$price = get_post_meta( $post->ID, 'Price',  true);
-$type = get_post_meta( $post->ID, 'Type',  true);
-$purpose = get_post_meta( $post->ID, 'Purpose', true);
-$payment_status = get_post_meta( $post->ID, 'Payment Status', true);
-$land_size = get_post_meta( $post->ID, 'Land Size', true);
-$land_unit = get_post_meta( $post->ID, 'Land Unit', true);
-$status = get_post_meta( $post->ID, 'Status', true) ?  get_post_meta( $post->ID, 'Status', true) : 'Available';
-$document_type = get_post_meta( $post->ID, 'Document Title',  true);
-$location = get_post_meta( $post->ID, 'Location',  true);
-$features = get_post_meta( $post->ID, 'Features',  true);
 $features  = preg_replace('/\s+/', '', $features);
-$features_array = preg_split ("/\,/", $features);  
-// print_r($post);
-
-// print_r($features)
-
-
+$features_array = preg_split ("/\,/", $features); 
 
 ?>
 <div class="container">
@@ -40,7 +35,7 @@ $features_array = preg_split ("/\,/", $features);
 			<div class="meta mb-3  mt-2 text-bold d-flex justify-content-between align-items-center">
 
             <?php if($price) : ?>
-                <h4 class="text-bold text-success">&#8358;<?php echo $price;  ?> <?php if($land_unit) : echo '/'  .' ' .$land_unit; endif; ?> </h4>
+                <h4 class="text-bold  mt-2 text-success">&#8358;<?php echo $price;  ?> <?php if($land_unit) : echo '/'  .' ' .$land_unit; endif; ?> </h4>
             <?php endif;  ?>
 
             <!-- <?php if($type) : ?>

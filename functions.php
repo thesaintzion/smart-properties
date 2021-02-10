@@ -66,6 +66,7 @@ if ( ! function_exists( 'smart_properties_scripts' ) ) {
 
  
 	   // Scripts 
+	   wp_enqueue_script( 'jquery' );
 	   $js_version_2 = $theme_version . '.' . filemtime( get_template_directory() . '/assets/js/main.js' );
 	    wp_enqueue_script( 'smart_properties-jquery-scripts-2', get_template_directory_uri() . '/assets/js/jquery-3.3.1.min.js', array(), $js_version_2,  true );
 		wp_enqueue_script( 'smart_properties-jquery-scripts','https://code.jquery.com/jquery-3.4.1.slim.min.js', array(), '3.4.1', true );
@@ -139,17 +140,17 @@ add_action( 'after_setup_theme', 'register_navwalker' );
 
 
 
-function excerpt($limit) {
-	$excerpt = explode(' ', get_the_excerpt(), $limit);
-	if (count($excerpt)>=$limit) {
-	  array_pop($excerpt);
-	  $excerpt = implode(" ",$excerpt).'...';
-	} else {
-	  $excerpt = implode(" ",$excerpt);
-	}	
-	$excerpt = preg_replace('`[[^]]*]`','',$excerpt);
-	return $excerpt;
-  }
+// Contact us form
+add_action('wp_ajax_enquiry', 'enquiry_form');
+add_action('wp_ajax_nopriv_enquiry', 'enquiry_form');
+
+function contact_form()
+{
+	$the_data = json_decode($_POST);
+	wp_send_json_success($the_data);
+	// wp_send_json_success('It wordkkkksss');
+
+}
 
 
 

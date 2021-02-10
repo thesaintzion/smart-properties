@@ -1,8 +1,11 @@
+
+
 $(document).ready(function() {
     window.onscroll = function() { scrollFunction() };
-
     // Get the header
     var header = document.querySelector(".navbar");
+    var  navbarBrand = document.querySelector(".navbar-brand");
+   
 
     // Get the offset position of the navbar
     var sticky = header.offsetTop;
@@ -23,6 +26,9 @@ $(document).ready(function() {
             header.classList.remove("bg-white");
             header.classList.add("navbar-dark");
             header.classList.add("bg-success");
+            navbarBrand.classList.remove("text-success");
+            navbarBrand.classList.add("text-white");
+
 
         } else {
             header.classList.remove("fixed-top");
@@ -31,6 +37,8 @@ $(document).ready(function() {
             header.classList.add("bg-white");
             header.classList.remove("navbar-dark");
             header.classList.remove("bg-success");
+            navbarBrand.classList.add("text-success");
+            navbarBrand.classList.remove("text-white");
 
         }
     }

@@ -16775,12 +16775,16 @@ h4.sub-title {
     }
 }
 
-.w3l-about-breadcrum .breadcrum-bg {
-    background-size: cover;
-    background-image: linear-gradient(to right, rgba(42, 42, 42, 0.71), rgba(38, 40, 40, 0.78)), url(../images/ser-1.jpg);
-    background-repeat: no-repeat, no-repeat, no-repeat;
-    background-position: center;
+.w3l-about-breadcrum .breadcrum{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom right;
     background-attachment: fixed;
+}
+
+.w3l-about-breadcrum .breadcrum-bg {
+    background-image: linear-gradient(to right, rgba(42, 42, 42, 0.71), rgba(38, 40, 40, 0.78)), url(../images/undraw_quite_town_mg2q.png);
+    
 }
 
 .w3l-about-breadcrum .bread-crub-top {

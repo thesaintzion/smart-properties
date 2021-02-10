@@ -12,6 +12,14 @@ Template Name: Contact Us
 defined( 'ABSPATH' ) || exit;
 
 get_header();
+
+$address =   get_field('address');
+$email   = preg_replace('/\s+/', '', get_field('email'));
+$email_array = preg_split ("/\,/", $email);
+$phone  = preg_replace('/\s+/', '', get_field('phone'));
+$phone_array = preg_split ("/\,/", $phone);
+// $map =   get_field('map');
+
 ?>
 
 <!-- Page header -->
@@ -27,54 +35,53 @@ get_header();
 				<h3 class="cont-head">Get in touch</h3>
 				<div class="d-grid align-form-map">
 					<div class="form-inner-cont">
-						
-						<form action="https://sendmail.w3layouts.com/submitForm" method="post" class="main-input">
-							<div class="top-inputs d-grid">
-								<input type="text" placeholder="Name" name="w3lName" id="w3lName" required="">
-								<input type="email" name="email" placeholder="Email" id="w3lSender" required="">
-							</div>
-							<input type="text" placeholder="Phone Number" name="w3lName" id="w3lName" required="">
-							<textarea placeholder="Message" name="w3lMessage" id="w3lMessage" required=""></textarea>
-							<div class="text-right">
-								<button type="submit" class="btn btn-theme3">Send Now</button>
-							</div>
-						</form>
+					
+						<?php get_template_part( 'inc/section', 'contact-form') ?>
+
 					</div>
 					
-					<div class="contact-right">
-						<img src="assets/images/ab-2.jpg" class="img-fluid" alt="">
+					<div class="contact-right border">
+						<?php if(has_post_thumbnail()) : ?>
+						<img src="<?php the_post_thumbnail_url(); ?>" class="w-100 rounded img-fluid">
+						<?php  endif;?>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="contant11-top-bg py-5">
 			<div class="container py-md-3">
+				
 				<div class="d-grid contact section-gap">
 					<div class="contact-info-left d-grid text-center">
 						<div class="contact-info">
 							<span class="fa fa-location-arrow" aria-hidden="true"></span>
 							<h4>Address</h4>
-							<p>485 Pretty View Lane, Lorem ipsum, London, England</p>
+							<p><?php echo $address ?></p>
 						</div>
 						<div class="contact-info">
 							<span class="fa fa-phone" aria-hidden="true"></span>
 							<h4>Phone</h4>
-							<p><a href="tel:+44 7834 857829">+44 7834 857829</a></p>
-							<p><a href="tel:+44 987 654 321">+44 987 654 321</a></p>
+						
+							<?php if(count($phone_array) > 1) :  foreach($phone_array as $p) { ?>
+								<p><a href="tel:<?php echo $p; ?>"><?php echo $p; ?></a></p>
+							<?php } endif; ?>
+
 						</div>
 						<div class="contact-info">
 							<span class="fa fa-envelope-open-o" aria-hidden="true"></span>
 							<h4>Mail</h4>
-							<p><a href="mailto:mail@example.com" class="email">mail@example.com</a></p>
-							<p><a href="mailto:mail@example.com" class="email">mail@example.com</a></p>
+							<?php if(count($email_array) > 1) :  foreach($email_array as $e) { ?>
+								<p><a class="email" href="mailto:<?php echo $e; ?>"><?php echo $e; ?></a></p>
+							<?php } endif; ?>
 						</div>
 					</div>
 				</div>
+				
 			</div>
 		</div>
-		<div class="map border">
+		<!-- <div class="map border">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d158857.7281066703!2d-0.24168144921176335!3d51.5287718408761!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon%2C%20UK!5e0!3m2!1sen!2sin!4v1569921526194!5m2!1sen!2sin" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-        </div>
+        </div> -->
 </section>
 <!-- //contact form -->
  

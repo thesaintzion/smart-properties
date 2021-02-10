@@ -10,18 +10,33 @@ defined( 'ABSPATH' ) || exit;
 
 
 
-$price = get_post_meta( $post->ID, 'Price',  true);
-$type = get_post_meta( $post->ID, 'Type',  true);
-$purpose = get_post_meta( $post->ID, 'Purpose', true);
-$payment_status = get_post_meta( $post->ID, 'Payment Status', true);
-$land_size = get_post_meta( $post->ID, 'Land Size', true);
-$land_unit = get_post_meta( $post->ID, 'Land Unit', true);
-$status = get_post_meta( $post->ID, 'Status', true) ?  get_post_meta( $post->ID, 'Status', true) : 'Available';
-$document_type = get_post_meta( $post->ID, 'Document Title',  true);
-$location = get_post_meta( $post->ID, 'Location',  true);
-$features = get_post_meta( $post->ID, 'Features',  true);
+// $price = get_post_meta( $post->ID, 'Price',  true);
+// $type = get_post_meta( $post->ID, 'Type',  true);
+// $purpose = get_post_meta( $post->ID, 'Purpose', true);
+// $payment_status = get_post_meta( $post->ID, 'Payment Status', true);
+// $land_size = get_post_meta( $post->ID, 'Land Size', true);
+// $land_unit = get_post_meta( $post->ID, 'Land Unit', true);
+// $status = get_post_meta( $post->ID, 'Status', true) ?  get_post_meta( $post->ID, 'Status', true) : 'Available';
+// $document_type = get_post_meta( $post->ID, 'Document Title',  true);
+// $location = get_post_meta( $post->ID, 'Location',  true);
+// $features = get_post_meta( $post->ID, 'Features',  true);
+// $features  = preg_replace('/\s+/', '', $features);
+// $features_array = preg_split ("/\,/", $features);  
+
+
+
+$price = number_format(get_field('price'));
+$location =   get_field('location');
+$type = get_field('type');
+$purpose = get_field('purpose');
+$payment_status = get_field('payment_status');
+$land_size =  get_field('land_size');
+$land_unit =  get_field('land_unit');
+$status = get_field('status') ?   get_field('status') : 'Available';
+$document_type = get_field('document_title');
+$features = get_field('features');
 $features  = preg_replace('/\s+/', '', $features);
-$features_array = preg_split ("/\,/", $features);  
+$features_array = preg_split ("/\,/", $features); 
 ?>
                    
                    
@@ -46,7 +61,7 @@ $features_array = preg_split ("/\,/", $features);
     </ul>
     <div class="info-bg">
         <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-        <p class="mb-1">&#8358;<?php echo $price;  ?>  <?php if($type === 'Land' || $type === 'land') : echo '/ per plot'; endif; ?> </p>
+        <p class="mb-1 text-success text-bold">&#8358;<?php echo $price;  ?>  <?php if($type === 'Land' || $type === 'land') : echo '/ per plot'; endif; ?> </p>
         <hr class="my-0">
         <?php if($location) : ?>
             <p class="mb-0"> <i class="fa fa-map-marker text-success"></i> <span class="text-muted"> <?php echo $location; ?> </span> </p>

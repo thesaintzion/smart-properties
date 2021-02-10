@@ -14,7 +14,7 @@ defined( 'ABSPATH' ) || exit;
  
     $property_args = array(
       'post_type' => 'properties',
-      'posts_per_page' => 3
+      'posts_per_page' => 6
       );
     $home_properties = new WP_Query ($property_args);
 
@@ -24,11 +24,11 @@ defined( 'ABSPATH' ) || exit;
       );
     $home_blogs = new WP_Query ($blog_args);
   
-
+  //  $type = get_field('type');
 	 ?>
 
   <div class="bg-light  p-5 d-flex justify-content-end">
-<small>Ads X</small>
+<small>Ads (A)</small>
   </div>
 
   <!-- <div class="bg-light  p-5 d-flex justify-content-end mt-1">
@@ -38,14 +38,14 @@ defined( 'ABSPATH' ) || exit;
 
 
   
-<section class="py-5 bg-white">
+<section class="py-2 py-lg-5 bg-white">
     <div class="container">
-<div class="d-flex justify-content-between align-items-center">
+<div class="d-block d-lg-flex  text-lg-left justify-content-between  align-items-center">
 
 <div class="heading">
-                    <h3 class="head">Properties</h3>
+                    <h3 class="head mb-4 mb-lg-0">Properties</h3>
                 </div>
-<ul class="nav nav-pills  justify-content-end ">
+<ul class="nav nav-pills  justify-content-between justify-lg-content-end ">
   <li class="nav-item">
     <a class="nav-link active" data-toggle="pill" href="#all"><span class="fa fa-sort"></span> All</a>
   </li>
@@ -82,8 +82,12 @@ defined( 'ABSPATH' ) || exit;
              
                 <?php if (  $home_properties->have_posts() ) :  while ($home_properties->have_posts()) : $home_properties->the_post(); ?>
 
+              
+
                    <?php 
-                     $type = get_post_meta( $post->ID, 'Type',  true); 
+
+                  $type = get_field('type');
+                   
                    if($type && ($type == 'House' || $type == 'house')) : ?>   
                     <div class="grids4-info   col-lg-4 col-md-6 mb-4">
                           <?php get_template_part( 'inc/section', 'property-all' ); ?>
@@ -102,7 +106,7 @@ defined( 'ABSPATH' ) || exit;
                   
                 <?php if (  $home_properties->have_posts() ) :  while ($home_properties->have_posts()) : $home_properties->the_post(); ?>
                     <?php 
-                     $type = get_post_meta( $post->ID, 'Type',  true); 
+                     $type = get_field('type');
                    if($type && ($type == 'Land' || $type == 'land')) : ?>   
                     <div class="grids4-info   col-lg-4 col-md-6 mb-4">
                           <?php get_template_part( 'inc/section', 'property-all' ); ?>

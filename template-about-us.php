@@ -25,17 +25,20 @@ get_header();
 
                     <div class="cwp4-text col-lg-6">
                     <?php get_template_part( 'inc/section', 'content') ?>
-                        <ul class="cont-4">
-                            <li><span class="mr-3 fa fa-long-arrow-right"></span>Insurgent Mindset</li>
-                            <li><span class="mr-3 fa fa-long-arrow-right"></span>Enduring Results </li>
-                            <li><span class="mr-3 fa fa-long-arrow-right"></span>Passionate People</li>
-
-                        </ul>
-                        <a class="btn btn-secondary btn-theme3 mt-3" href="#team"> About Our Team</a>
+                        <a class="btn btn-secondary btn-theme3 mt-3" href="contact-us">Contact Us</a>
                     </div>
                     
-                    <div class="cwp4-image col-lg-6 pl-lg-5 mt-lg-0 mt-5 border">
-                        <img src="./wp-content/themes/smartproperties/assets/images/g4.jpg" class="img-fluid" alt="" />
+                    <div class="cwp4-image col-lg-6 pl-lg-5 mt-lg-0 mt-5">
+                       
+
+                        
+    
+        <?php if(has_post_thumbnail()) : ?>
+        
+        <img src="<?php the_post_thumbnail_url(); ?>" class="w-100 rounded img-fluid">
+        
+      <?php  endif;?>
+     
                     </div>
                 </div>
             </div>
