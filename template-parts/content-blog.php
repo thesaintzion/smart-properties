@@ -25,7 +25,9 @@ defined( 'ABSPATH' ) || exit;
 
 <div class="mb-4">
 
-<!-- <?php wp_get_archives(); ?> -->
+<?php 
+// wp_get_archives();
+ ?>
 
 
 <?php 

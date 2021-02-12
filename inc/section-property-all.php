@@ -24,10 +24,9 @@ defined( 'ABSPATH' ) || exit;
 // $features_array = preg_split ("/\,/", $features);  
 
 
-
+$type = get_field('type');
 $price = number_format(get_field('price'));
 $location =   get_field('location');
-$type = get_field('type');
 $purpose = get_field('purpose');
 $payment_status = get_field('payment_status');
 $land_size =  get_field('land_size');

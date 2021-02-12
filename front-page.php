@@ -31,6 +31,9 @@ defined( 'ABSPATH' ) || exit;
 <small>Ads (A)</small>
   </div>
 
+  <?php get_template_part( 'inc/section', 'search-form' ); ?>
+
+
   <!-- <div class="bg-light  p-5 d-flex justify-content-end mt-1">
 <small>Ads X</small>
   </div> -->
@@ -81,9 +84,6 @@ defined( 'ABSPATH' ) || exit;
                 <div class="row pt-3">
              
                 <?php if (  $home_properties->have_posts() ) :  while ($home_properties->have_posts()) : $home_properties->the_post(); ?>
-
-              
-
                    <?php 
 
                   $type = get_field('type');
@@ -144,7 +144,6 @@ defined( 'ABSPATH' ) || exit;
                 
                     <div class="content">
                       <div class="row">
-
                       <?php
                       if (   $home_blogs->have_posts() ) { 
                       while (  $home_blogs->have_posts() ) {
@@ -158,7 +157,6 @@ defined( 'ABSPATH' ) || exit;
                     </div>
                   </div>
 
-
                   <a href="blog" class="btn btn-outline-success w-100 mt-3 mb-4"> 
                     <div class="d-flex justify-content-center align-items-center">
                     <span> More Articles </span>
@@ -168,11 +166,7 @@ defined( 'ABSPATH' ) || exit;
 
           </div>
         </div>
-
     </section>
-
-
-
 <?php
   wp_reset_postdata();
  get_footer(); ?>

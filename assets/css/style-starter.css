@@ -3476,10 +3476,20 @@ h3,
     font-size: 1.75rem;
 }
 
+
+
+
 @media (max-width: 1200px) {
     h3,
     .h3 {
         font-size: calc(1.3rem + 0.6vw);
+    }
+}
+
+@media (min-width: 992px) {
+    h3,
+    .h3 {
+        font-size: 1.50rem !important;
     }
 }
 
@@ -3706,7 +3716,9 @@ pre code {
 
 @media (min-width: 992px) {
     .container {
-        max-width: 960px;
+        /* max-width: 960px; */
+        /* max-width: 1140px; */
+        max-width: 1111px;
     }
 }
 
@@ -3748,7 +3760,9 @@ pre code {
     .container-sm,
     .container-md,
     .container-lg {
-        max-width: 960px;
+        /* max-width: 960px; */
+        /* max-width: 1140px; */
+          max-width: 1111px;
     }
 }
 
